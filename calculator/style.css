@@ -1,0 +1,92 @@
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #ffbfbf; /* Warm red border */
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    background-color: #ffe6e6; /* Warm off-white background */
+}
+
+.calculator input[type="text"] {
+    grid-column: span 4;
+    padding: 15px;
+    font-size: 20px;
+    text-align: right;
+    border: none;
+    outline: none;
+}
+
+.calculator button {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ffbfbf; /* Warm red border */
+    border-radius: 5px;
+    background-color: #ffd6cc; /* Warm light orange background */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.calculator button:hover {
+    background-color: #ffcc99; /* Warmer light orange on hover */
+    transform: translateY(-3px);
+}
+
+.calculator button:active {
+    background-color: #ffad99; /* Warmer light orange on active */
+    transform: translateY(1px);
+}
+
+button[name="clear"],
+button[name="clear_all"] {
+    grid-column: span 2;
+}
+
+button[name="operator"] {
+    grid-column: span 1;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button[name="equals"]:hover {
+    transform: scale(1.05);
+}
+
+.calculator:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+button[name="clear"]:hover,
+button[name="clear_all"]:hover {
+    background-color: #ff8080; /* Warmer red on hover */
+    color: white;
+}
+
+button[name="operator"]:hover {
+    background-color: #ff9933; /* Warmer orange on hover */
+    color: white;
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+.calculator input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button[name="calculate"][value="="] {
+    color: #fff;
+    background-color: #ff6666; /* Warm red */
+}
+
+button[name="calculate"][value="="]:hover {
+    background-color: #ff4d4d; /* Warmer red on hover */
+    transform: scale(1.05);
+}
